@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inconsolata', monospace;
+  }
+  .all{
+    overflow: hidden;
+  }
+  .body{
+    width: 100%;
+    display: flex;
+  }
+  .side{
+    width: 7%;
+    padding: 10px 0px 0px 15px;
+  }
+  .small{
+    width: 23%;
+    background-color: rgb(234, 234, 235);
+    padding: 20px 15px 0px 15px;
+  }
+  .main{
+    width: 69%;
+    padding: 20px 15px 0px 15px;
+  }
+  .pon img{
+    width: 70px;
+  }
+  .icons{
+    padding-top: 80px;
+    padding-left: 18px;
+  }
+  .icons i{
+    font-size: 18px;
+    margin-bottom: 35px;
+  }
+  .icons i:hover{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    margin-left: -7px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: 0 0 10px whitesmoke;
+    color: orange;
+  }
+  .icons a{
+    text-decoration: none;
+    color: black;
+  }
+  .lil{
+    padding-top: 100px;
+  }
+  .sam{
+    padding: 20px 20px
+  }
+  .sam i{
+    font-size: 17px;
+  }
+  .sam h5{
+    font-weight: 800;
+  }
+  .line{
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    border: none;
+  }
+  #studentDetails {
+    padding: 15px 30px 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #studentDetails img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid orange;
+    border-width: 2px 1px 3px 5px;
+}
+  #studentDetails h6{
+    font-weight: 800;
+    font-size: 17px;
+  }
+  .dim{
+    margin-top: -5px;
+    font-size: 18px;
+  }
+  .dam{
+    margin-top: 10px;
+  }
+  .upp{
+    padding: 0px 30px 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .upp h4{
+    font-weight: 800;
+    font-size: 23px;
+  }
+  .upp button {
+    border: none;
+    display: flex;
+    padding: 0.75rem 1.5rem;
+    background-color: black;
+    color: #ffffff;
+    font-size: 0.75rem;
+    margin-top: 15px;
+    line-height: 1rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    align-items: center;
+    border-radius: 0.5rem;
+    user-select: none;
+    gap: 0.75rem;
+    box-shadow: 0 4px 6px -1px #488aec31, 0 2px 4px -1px #488aec17;
+    transition: all .6s ease;
+  }
+  .upp button:hover {
+    box-shadow: 0 10px 15px -3px #488aec4f, 0 4px 6px -2px #488aec17;
+  }
+  .upp button:focus,button:active {
+    opacity: .85;
+    box-shadow: none;
+  }
+  .upp button svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  #uploadedFiles{
+    box-shadow: #63636333 0px 1px 4px 0px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .hel h4{
+    font-weight: 800;
+  }
+.notification-icon {
+  position: relative;
+  cursor: pointer;
+  margin-top: -30px !important;
+  margin-right: 20px !important;
+}
+.notification-icon i{
+  font-size: 22px;
+}
+.notification-dot {
+  position: absolute;
+  top: 40px;
+  right: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  display: none;
+}
+
+.notification-heading {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+.unread-count {
+    background-color: red;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.mark-as-read {
+    cursor: pointer;
+    color: black;
+    text-decoration: underline;
+}
+.notification {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 7px;
+    box-shadow: #63636333 0px 1px 4px 0px;
+}
+.notification.unread {
+    background-color: #add8e6; 
+}
+.notification-details {
+    display: none;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+}
+
+.notification-content span{
+    font-weight: 800;
+}
+.notification-details p {
+    margin: 0;
+}

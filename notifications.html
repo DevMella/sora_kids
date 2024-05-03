@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sora_kids</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://kit.fontawesome.com/93483deb2b.js" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="notification.css">
+</head>
+<body>
+    <div class="all">
+        <div class="body">
+            <div class="side">
+                <div class="pon">
+                    <img src="image/three.png" alt="">
+                </div>
+                <div class="icons ">
+                    <div><a href=""><i class="fa-solid fa-house"></i></a></div>
+                    <div><a href=""><i class="fa-solid fa-list"></i></a></div>
+                    <div><a href=""><i class="fa-solid fa-clock"></i></a></div>
+                    <div><a href=""><i class="fa-solid fa-newspaper"></i></a></div>
+                    <div><a href=""><i class="fa-brands fa-phoenix-framework"></i></a></div>
+                    <div><a href=""><i class="fa-solid fa-book"></i></a></div>
+                    <div class="lil"><a href=""><i class="fa-solid fa-right-from-bracket"></i></a></div>
+                </div>
+            </div>
+            <div class="small">
+                <div class="d-flex justify-content-between sam">
+                    <h5>My Profile</h5>
+                    <i class="fa-solid fa-user mt-1"></i>  
+                </div>
+                <div class="line"></div>
+                <div id="studentDetails"></div>
+                <div class="upp">
+                    <div id="message"></div>
+                    <div id="uploadedFiles"></div>
+                    <h4>Upload Your Assignment</h4>
+                    <input type="file" id="fileInput">
+                    <button onclick="uploadFile()">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 3H12H8C6.34315 3 5 4.34315 5 6V18C5 19.6569 6.34315 21 8 21H11M13.5 3L19 8.625M13.5 3V7.625C13.5 8.17728 13.9477 8.625 14.5 8.625H19M19 8.625V11.8125" stroke="#fffffff" stroke-width="2"></path>
+                      <path d="M17 15V18M17 21V18M17 18H14M17 18H20" stroke="#fffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      ADD FILE 
+                      </button>
+                </div>
+            </div>
+            <div class="main">
+                <div class="notification-container">
+                    <div class="d-flex align-items-center justify-content-between you">
+                        <div class="notification-heading d-flex gap-2">
+                            Notifications
+                            <div class="unread-count d-flex align-items-center justify-content-center" id="unreadCount">2</div>
+                        </div>
+                        <div class="mark-as-read" onclick="markAllAsRead()">Mark all as read</div>
+                    </div>
+                    <div class="notification unread mt-4" onclick="toggleNotificationDetails(this, 2)">
+                        <div class="notification-content">
+                            <img src="image/avatar-jacob-thompson.webp" alt="User Avatar" width="30" height="30" style="margin-right: 10px;">
+                            We now have a new <span>Mathematics Teacher</span> 😀
+                        </div>
+                        <span class="notification-status"></span>
+                        <div class="notification-details">
+                            <p>Mr Bamishaye is one of the new employed Mathematics Teacher in the school.</p>
+                        </div>
+                    </div>
+ 
+                    <div class="notification unread mt-4" onclick="toggleNotificationDetails(this, 2)">
+                        <div class="notification-content">
+                            <img src="image/avatar-anna-kim.webp" alt="User Avatar" width="30" height="30" style="margin-right: 10px;">
+                            The school <span>Interhouse Sport</span> is coming up on 14th of May, 2024💪😀
+                        </div>
+                        <span class="notification-status"></span>
+                        <div class="notification-details">
+                            <p>The school interhouse sport will be coming up on 14th of May, 2024.</p>
+                        </div>
+                    </div>
+
+                    <div class="notification unread mt-4" onclick="toggleNotificationDetails(this, 2)">
+                        <div class="notification-content">
+                            <img src="image/avatar-angela-gray.webp" alt="User Avatar" width="30" height="30" style="margin-right: 10px;">
+                            We'll be appointing our <span>new School Prefect</span> next week!
+                        </div>
+                        <span class="notification-status"></span>
+                        <div class="notification-details">
+                            <p>We'll be announcing the new school prefect appointees next week.</p>
+                        </div>
+                    </div>
+
+                    <div class="notification mt-4" onclick="toggleNotificationDetails(this, 1)">
+                        <div class="notification-content">
+                            <img src="image/avatar-kimberly-smith.webp" alt="User Avatar" width="30" height="30" style="margin-right: 10px;">
+                            <span>Parent and Teacher's meeting</span> will be coming up next month
+                        </div>
+                        <span class="notification-status"></span>
+                        <div class="notification-details">
+                            <p>The School Parent and Teacher's meeting will be coming up next month.</p>
+                        </div>
+                    </div>
+
+                    <div class="notification mt-4" onclick="toggleNotificationDetails(this, 1)">
+                        <div class="notification-content">
+                            <img src="image/avatar-rizky-hasanuddin.webp" width="30" height="30" style="margin-right: 10px;">
+                            <span>Ken and Kate novel</span> is out!
+                        </div>
+                        <span class="notification-status"></span>
+                        <div class="notification-details">
+                            <p>The long awaited novel "Ken and Kate is out.</p>
+                        </div>
+                    </div>
+
+                    <div class="notification mt-4" onclick="toggleNotificationDetails(this, 1)">
+                        <div class="notification-content">
+                            <img src="image/avatar-nathan-peterson.webp" alt="User Avatar" width="30" height="30" style="margin-right: 10px;">
+                            <span>Examination Timetable</span> is out! 
+                        </div>
+                        <span class="notification-status"></span>
+                        <div class="notification-details">
+                            <p>The Examination Timetable is out, kindly check it out.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let openNotification = null;
+    
+        function markAllAsRead() {
+            const unreadNotifications = document.querySelectorAll('.notification.unread');
+            unreadNotifications.forEach(notification => {
+                notification.classList.remove('unread');
+                const notificationId = notification.dataset.id;
+                markNotificationAsRead(notificationId);
+            });
+            updateUnreadCount(); 
+        }
+    
+        function toggleNotificationDetails(notification, id) {
+            const details = notification.querySelector('.notification-details');
+            const status = notification.querySelector('.notification-status');
+    
+            if (openNotification && openNotification !== notification) {
+                openNotification.querySelector('.notification-details').style.display = 'none';
+                openNotification.querySelector('.notification-status').innerText = '';
+                openNotification.classList.remove('unread');
+            }
+    
+            details.style.display = details.style.display === 'block' ? 'none' : 'block';
+            status.innerText = details.style.display === 'block' ? '' : '';
+    
+            if (notification.classList.contains('unread')) {
+                notification.classList.remove('unread');
+                markNotificationAsRead(id);
+                updateUnreadCount(); 
+            }
+    
+            openNotification = details.style.display === 'block' ? notification : null;
+        }
+    
+        function updateUnreadCount() {
+            const unreadCountElement = document.getElementById('unreadCount');
+            const unreadNotifications = document.querySelectorAll('.notification.unread').length;
+            unreadCountElement.innerText = unreadNotifications;
+        }
+    
+        function markNotificationAsRead(id) {
+            localStorage.setItem(`notification_${id}`, 'read');
+        }
+    
+        updateUnreadCount();
+    </script>
+    <script>
+        function updateNotificationDot() {
+            const dot = document.getElementById('notificationDot');
+            const unreadNotifications = 2;
+            if (unreadNotifications > 0) {
+                dot.style.display = 'block';
+            } else {
+                dot.style.display = 'none';
+            }
+        }
+        function notificationsRead() {
+            updateNotificationDot(); 
+        }
+    
+        updateNotificationDot();
+    </script>
+
+    <script>
+        function uploadFile() {
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+            if (!file) {
+                document.getElementById('message').innerText = "Please select a file.";
+                return;
+            }
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const fileData = event.target.result;
+                localStorage.setItem(file.name, fileData);
+        
+                document.getElementById('message').innerText = "File uploaded successfully.";
+             listUploadedFiles();
+            };
+             reader.readAsDataURL(file);
+        }
+
+            function listUploadedFiles() {
+                const uploadedFilesDiv = document.getElementById('uploadedFiles');
+                 uploadedFilesDiv.innerHTML = '';
+
+                for (let i = 0; i < localStorage.length; i++) {
+                    const fileName = localStorage.key(i);
+                    const fileData = localStorage.getItem(fileName);
+
+                    const link = document.createElement('a');
+                    link.href = fileData;
+                    link.textContent = fileName;
+                    link.download = fileName; 
+                    link.target = '_blank';
+
+                    uploadedFilesDiv.appendChild(link);
+                    uploadedFilesDiv.appendChild(document.createElement('br'));
+                }
+            }
+
+    </script>
+
+<script>
+    function updateNotificationDot() {
+      const dot = document.getElementById('notificationDot');
+      const unreadNotifications = 2;
+      if (unreadNotifications > 0) {
+        dot.style.display = 'block';
+      } else {
+        dot.style.display = 'none';
+      }
+    }
+
+    function notificationsRead() {
+      updateNotificationDot();
+    }
+
+    updateNotificationDot();
+  </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </body>
+</body>
+</html>

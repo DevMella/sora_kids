@@ -1,0 +1,375 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inconsolata', monospace;
+  }
+  .all{
+    overflow: hidden;
+  }
+  .body{
+    width: 100%;
+    display: flex;
+  }
+  .side{
+    width: 7%;
+    padding: 10px 0px 0px 15px;
+    position: fixed;
+    z-index: 100 !important;
+  }
+  
+.icon{
+  background-color: rgb(234, 234, 235);
+  padding: 20px 20px 15px 20px;
+}
+.icon a {
+  text-decoration: none;
+  color: black;
+}
+.icon i{
+  font-size: 21px;
+}
+  .small{
+    width: 23%;
+    background-color: rgb(234, 234, 235);
+    padding: 20px 0px 0px 10px;
+    margin-left: 90px;
+  }
+  .main{
+    width: 74%;
+  }
+  .pon img{
+    width: 70px;
+  }
+  .icons{
+    padding-top: 80px;
+    padding-left: 18px;
+  }
+  .icons i{
+    font-size: 18px;
+    margin-bottom: 35px;
+  }
+  .icons i:hover{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    margin-left: -7px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: 0 0 10px whitesmoke;
+    color: orange;
+  }
+  .icons a{
+    text-decoration: none;
+    color: black;
+  }
+  .lil{
+    padding-top: 100px;
+  }
+  .sam{
+    padding: 20px 20px
+  }
+  .sam i{
+    font-size: 17px;
+  }
+  .sam h5{
+    font-weight: 800;
+  }
+  .line{
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    border: none;
+  }
+  #studentDetails {
+    padding: 15px 30px 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #studentDetails img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid orange;
+    border-width: 2px 1px 3px 5px;
+  }
+  #studentDetails h6{
+    font-weight: 800;
+    font-size: 17px;
+  }
+  .dim{
+    margin-top: -5px;
+    font-size: 18px;
+  }
+  .dam{
+    margin-top: 10px;
+  }
+  .upp{
+    padding: 0px 30px 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .upp h4{
+    font-weight: 800;
+    font-size: 20px;
+  }
+  .upp button {
+    border: none;
+    display: flex;
+    padding: 0.75rem 1.5rem;
+    background-color: black;
+    color: #ffffff;
+    font-size: 0.75rem;
+    margin-top: 15px;
+    line-height: 1rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    align-items: center;
+    border-radius: 0.5rem;
+    user-select: none;
+    gap: 0.75rem;
+    box-shadow: 0 4px 6px -1px #488aec31, 0 2px 4px -1px #488aec17;
+    transition: all .6s ease;
+  }
+  .upp button:hover {
+    box-shadow: 0 10px 15px -3px #488aec4f, 0 4px 6px -2px #488aec17;
+  }
+  .upp button:focus,button:active {
+    opacity: .85;
+    box-shadow: none;
+  }
+  .upp button svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  #uploadedFiles{
+    box-shadow: #63636333 0px 1px 4px 0px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .hel h4{
+    font-weight: 800;
+  }
+  #uploadInfo{
+    display: flex;
+    gap: 10px;
+    overflow-y: auto;
+    margin-top: 20px;
+  }
+  #uploadInfo h5{
+    font-weight: 800;
+    margin-top: 10px;
+  }
+  #uploadInfo p{
+    margin-top: -10px;
+  }
+  .bil{
+    background-color: black;
+    color: white;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-weight: 800;
+  }
+  .form-group input{
+    margin-bottom: 18px;
+  }
+  .button {
+    position: relative;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    background-color: black;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+  .button, .button__icon, .button__text {
+    transition: all 0.3s;
+  }
+  .button .button__text {
+    transform: translateX(30px);
+    color: #fff;
+    font-weight: 600;
+  }
+  .button .button__icon {
+    position: absolute;
+    transform: translateX(109px);
+    height: 100%;
+    width: 39px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+  }
+  .button .svg {
+    width: 30px;
+    stroke: #fff;
+  }
+  .button:hover {
+    background: black;
+  }
+  .button:hover .button__text {
+    color: transparent;
+  }
+  .button:hover .button__icon {
+    width: 148px;
+    transform: translateX(0);
+  }
+  .button:active .button__icon {
+    background-color: black;
+  }
+  .button:active {
+    border: 1px solid black;
+  }
+  .class{
+    border: 2px solid gainsboro;
+    padding: 7px 7px 6px 7px;
+    border-radius: 7px;
+  }
+  .images img{
+    width: 30px;
+    margin-left: -12px;
+  }
+  .des img{
+    width: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: -30px;
+  }
+  .how h5{
+    font-weight: 800;
+  }
+  .how i{
+    color: orange;
+  }
+  .bot{
+    margin-top: -20px;
+  }
+  .bot button{
+    width: 100px;
+    height: 40px;
+    border: none;
+    background-color: orange;
+    border-radius: 7px;
+    font-weight: 800 ;
+  }
+  .taa h4{
+    font-weight: 800;
+  }
+  .line{
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    margin-top: 10px;
+  }
+  .omo img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .notification-icon {
+  position: relative;
+  cursor: pointer;
+  margin-top: -60px !important;
+  margin-right: 20px !important;
+  }
+  .notification-icon i{
+  font-size: 22px;
+  }
+  .notification-dot {
+  position: absolute;
+  right: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  display: none;
+  }
+  .dee{
+    width: 100%;
+    height: 50px;
+    box-shadow: #63636333 0px 1px 4px 0px;
+    border: 1px solid gainsboro;
+    padding: 10px;
+  }
+  .dee h5{
+    font-weight: 800;
+  }
+  .rii{
+    padding: 17px;
+  }
+  .boy{
+    box-shadow: #63636333 0px 1px 4px 0px;
+    width: 100%;
+    border-radius: 10px 10px 10px 10px;
+  }
+  .epe{
+    padding: 15px;
+  }
+  .epe h4{
+    font-weight: 800;
+  }
+  .epes{
+    padding: 0px 10px 3px 10px;
+  }
+  .aii h4{
+    font-size: 18px;
+    font-weight: 800;
+  }
+  .ala video{
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+  }
+  .lii{
+    height: 10px;
+  }
+  .mad video{
+    width: 100%;
+    border-radius: 10px;
+  }
+  .mad h5{
+    font-weight: 800;
+  }
+  .who{
+    padding: 15px 20px 10px 15px;
+  }
+  .bay img{
+    width: 100%;
+    height: 130px;
+    border-radius: 10px 10px 0px 0px;
+    object-fit: cover;
+  }
+  @media (max-width:764px) {
+  .body{
+    flex-direction: column;
+  }
+  .side{
+    display: none;
+  }
+  .small{
+    width: 100%;
+    margin-left: 0px;
+  }
+  #studentDetails img {
+    width: 50px;
+    height: 50px;
+  }
+  .main{
+  width: 100%;
+  }
+  }

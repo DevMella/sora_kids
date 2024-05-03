@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sora_kids</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://kit.fontawesome.com/93483deb2b.js" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.css">
+<link rel="stylesheet" href="studentdashborad.css">
+</head>
+<body>
+    <div class="all">
+        <div class="body">
+            <div class="icon d-flex justify-content-between  fixed-bottom w-100 d-lg-none d-md-none d-block gap-2">
+                <div>
+                    <a href="studentdashboard.html" class="d-flex flex-column align-items-center">
+                        <i class="fa-solid fa-house text-center "></i>
+                    </a>
+                </div>
+                <div>
+                    <a href="classlist.html" class="d-flex flex-column align-items-center">
+                        <i class="fa-solid fa-list"></i>
+                    </a>
+                </div>
+                <div class="sap">
+                    <a href="schedule.html" class="d-flex flex-column align-items-center">
+                        <i class="fa-solid fa-clock"></i>
+                    </a>
+                </div>
+                <div class="sap">
+                    <a href="result.html" class="d-flex flex-column align-items-center">
+                        <i class="fa-solid fa-newspaper"></i>
+                    </a>
+                </div>
+                <div class="sap">
+                    <a href="news.html" class="d-flex flex-column align-items-center">
+                        <i class="fa-brands fa-phoenix-framework"></i>
+                    </a>
+                </div>
+                <div class="sap">
+                    <a href="reading.html" class="d-flex flex-column align-items-center">
+                        <i class="fa-solid fa-book"></i>
+                    </a>
+                </div>
+                <div>
+                    <a href="studentlog.html" class="d-flex flex-column align-items-center">
+                        <i class="fa-solid fa-right-from-bracket fs-4"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="side">
+                <div class="pon">
+                    <img src="image/three.png" alt="">
+                </div>
+                <div class="icons ">
+                    <div><a href="studentdashboard.html"><i class="fa-solid fa-house"></i></a></div>
+                    <div><a href="classlist.html"><i class="fa-solid fa-list"></i></a></div>
+                    <div><a href="schedule.html"><i class="fa-solid fa-clock"></i></a></div>
+                    <div><a href="result.html"><i class="fa-solid fa-newspaper"></i></a></div>
+                    <div><a href="news.html"><i class="fa-brands fa-phoenix-framework"></i></a></div>
+                    <div><a href="reading.html"><i class="fa-solid fa-book"></i></a></div>
+                    <div class="lil"><a href="studentlog.html"><i class="fa-solid fa-right-from-bracket"></i></a></div>
+                </div>
+            </div>
+            <div class="small">
+                <div class="d-lg-block d-none">
+                    <div class="d-flex justify-content-between sam ">
+                        <h5>My Profile</h5>
+                        <i class="fa-solid fa-user mt-1"></i>  
+                    </div>
+                </div>
+                <div class="line d-lg-block d-none"></div>
+                <div class="hel d-flex justify-content-between  d-lg-none d-block">
+                    <div>
+                        <h4>Hi, Sora Kids!</h4>
+                        <h6>Manage your classes and development</h6>
+                    </div>
+                    <div class="notification-icon d-flex align-items-center justify-content-end" onclick="window.location.href='notifications.html'">
+                        <span class="notification-dot" id="notificationDot"></span>
+                        <i class="fa-solid fa-bell"></i>
+                      </div>
+                </div>
+                <div class="class d-flex  justify-content-between align-items-center d-lg-none d-block">
+                    <h6 class="mt-1">Classmates</h6>
+                    <div class="images">
+                        <img src="image/avatar-angela-gray.webp" alt="">
+                        <img src="image/avatar-anna-kim.webp" alt="">
+                        <img src="image/avatar-jacob-thompson.webp" alt="">
+                        <img src="image/avatar-kimberly-smith.webp" alt="">
+                        <img src="image/avatar-mark-webber.webp" alt="">
+                        <img src="image/avatar-nathan-peterson.webp" alt="">
+                        <img src="image/avatar-rizky-hasanuddin.webp" alt="">
+                    </div>
+                </div>
+                <div id="studentDetails"></div>
+                <div class="upp">
+                    <div id="uploadedFiles"></div>
+                    <div id="message"></div>
+                    <h4>Upload Your Assignment</h4>
+                    <input type="file" id="fileInput">
+                    <button onclick="uploadFile()">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 3H12H8C6.34315 3 5 4.34315 5 6V18C5 19.6569 6.34315 21 8 21H11M13.5 3L19 8.625M13.5 3V7.625C13.5 8.17728 13.9477 8.625 14.5 8.625H19M19 8.625V11.8125" stroke="#fffffff" stroke-width="2"></path>
+                      <path d="M17 15V18M17 21V18M17 18H14M17 18H20" stroke="#fffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      ADD FILE 
+                      </button>
+                </div>
+            </div>
+            <div class="main ">
+                <div class="hel d-flex justify-content-between d-lg-block d-none">
+                    <div>
+                        <h4>Hi, Sora Kids!</h4>
+                        <h6>Manage your classes and development</h6>
+                    </div>
+                    <div class="notification-icon d-flex align-items-center justify-content-end" onclick="window.location.href='notifications.html'">
+                        <span class="notification-dot" id="notificationDot"></span>
+                        <i class="fa-solid fa-bell"></i>
+                      </div>
+                </div>
+                <div class="cont mt-4">
+                    <div class="d-lg-block d-none">
+                        <div class="class d-flex  justify-content-between align-items-center">
+                            <h6 class="mt-1">Classmates</h6>
+                            <div class="images">
+                                <img src="image/avatar-angela-gray.webp" alt="">
+                                <img src="image/avatar-anna-kim.webp" alt="">
+                                <img src="image/avatar-jacob-thompson.webp" alt="">
+                                <img src="image/avatar-kimberly-smith.webp" alt="">
+                                <img src="image/avatar-mark-webber.webp" alt="">
+                                <img src="image/avatar-nathan-peterson.webp" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="uploadInfo"></div>
+                    <button type="button" class="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <span class="button__text">Add Courses</span>
+                        <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
+                    </button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">  Add New Course</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                 <form id="uploadForm">
+                                    <div class="form-group">
+                                        <label for="teacherName">Teacher Name:</label>
+                                        <input type="text" class="form-control" id="teacherName" required>
+                                     </div>
+                                    <div class="form-group">
+                                        <label for="courseName">Course Name:</label>
+                                        <input type="text" class="form-control" id="courseName" required>
+                                    </div>
+                                    <div class="form-group">
+                                         <label for="imageFile">Select Image:</label>
+                                        <input type="file" class="form-control-file" id="imageFile" accept="image/*" required>
+                                     </div>
+                                    <button type="submit" class="bil mt-3">Submit</button> 
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                 <button type="button" class="bil" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4 taa">
+                    <h4>Upcoming Classes</h4>
+                    <div class="upcome mt-3 d-flex gap-4 align-items-center ">
+                        <div class="des ">
+                            <img src="https://i.pinimg.com/564x/03/33/c7/0333c75d87508b53d9265f525ac52d4a.jpg" alt="">
+                        </div>
+                        <div class="how">
+                            <h5>Introduction to Decimals and Percentages</h5>
+                            <div class="d-flex gap-4">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <h6 class="mt-2">1 hour 10 mins</h6>
+                                </div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="fa-solid fa-book"></i>
+                                    <h6 class="mt-2">1 Capter</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bot">
+                            <button>Important</button>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="upcome mt-3 d-flex gap-4 align-items-center ">
+                        <div class="des ">
+                            <img src="https://i.pinimg.com/564x/03/33/c7/0333c75d87508b53d9265f525ac52d4a.jpg" alt="">
+                        </div>
+                        <div class="how">
+                            <h5>Introduction to Decimals and Percentages</h5>
+                            <div class="d-flex gap-4">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <h6 class="mt-2">1 hour 10 mins</h6>
+                                </div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="fa-solid fa-book"></i>
+                                    <h6 class="mt-2">1 Capter</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bot">
+                            <button>Important</button>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+            </div>
+            
+            <div class="last">
+                <div class="omo">
+                    <img src="https://i.pinimg.com/236x/43/80/7e/43807e3b296aba05332e66574ac6dbf6.jpg" alt="">
+                </div>
+                <div class="containe">
+                    <div class="d-flex justify-content-between">
+                        <h4>Performance</h4>
+                        <select id="view-select">
+                            <option value="monthly">Monthly</option>
+                            <option value="weekly">Weekly</option>
+                            <option value="daily">Daily</option>
+                        </select>
+                    </div>
+                    <canvas id="performance-chart"></canvas>
+                </div>
+                <div class="kid mt-4">
+                    <div class="d-flex align-items-center gap-3">
+                        <h2>30%</h2>
+                        <h5>Off tuiton fee for the best graduating student for their university level</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const viewSelect = document.getElementById('view-select');
+        const performanceChart = document.getElementById('performance-chart').getContext('2d');
+  
+        const data = {
+          monthly: {
+            labels: ['Jan', 'Feb', 'Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+            values: [80, 85, 75,70,60,85,40,10,100,70,80,80] 
+          },
+          weekly: {
+            labels: ['Week 1', 'Week 2', 'Week 3','Week 4'], 
+            values: [70, 45, 72,80,] 
+          },
+          daily: {
+            labels: ['Mon', 'Tues', 'Wed','Thur','Fri','Sat','Sun'], 
+            values: [75, 78, 80,40,70,10,70] 
+          }
+        };
+  
+        let chart;
+  
+        function updateChart(view) {
+          const selectedData = data[view];
+  
+          if (chart) {
+            chart.destroy(); 
+          }
+  
+          chart = new Chart(performanceChart, {
+            type: 'line',
+            data: {
+              labels: selectedData.labels,
+              datasets: [{
+                label: 'Performance',
+                data: selectedData.values,
+                borderColor: 'black',
+                backgroundColor: 'rgba(0, 0, 255, 0.1)',
+              }]
+            },
+            options: {
+              scales: {
+                y: {
+                  beginAtZero: true,
+                  ticks: {
+                    stepSize: 10,
+                  }
+                }
+              }
+            }
+          });
+        }
+        updateChart(viewSelect.value);
+        viewSelect.addEventListener('change', function() {
+          updateChart(this.value);
+        });
+      });
+    </script>
+  
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const studentDetails = JSON.parse(localStorage.getItem('studentDetails'));
+            if (studentDetails) {
+                const studentDetailsDiv = document.getElementById('studentDetails');
+                studentDetailsDiv.innerHTML = `
+                <img src="data:image/jpeg;base64,${studentDetails.image}" alt="Student Image">
+                <h6 class="dam">${studentDetails.name}</h6>
+                <p class="dim">${studentDetails.class}</p>`;
+            } else {
+                const studentDetailsDiv = document.getElementById('studentDetails');
+                 studentDetailsDiv.innerHTML = "<p>No student details found.</p>";
+            }
+        });
+    </script>
+
+    <script>
+        function uploadFile() {
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+            if (!file) {
+                document.getElementById('message').innerText = "Please select a file.";
+                return;
+            }
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const fileData = event.target.result;
+                localStorage.setItem(file.name, fileData);
+        
+                document.getElementById('message').innerText = "File uploaded successfully.";
+             listUploadedFiles();
+            };
+             reader.readAsDataURL(file);
+        }
+
+            function listUploadedFiles() {
+                const uploadedFilesDiv = document.getElementById('uploadedFiles');
+                 uploadedFilesDiv.innerHTML = '';
+
+                for (let i = 0; i < localStorage.length; i++) {
+                    const fileName = localStorage.key(i);
+                    const fileData = localStorage.getItem(fileName);
+
+                    const link = document.createElement('a');
+                    link.href = fileData;
+                    link.textContent = fileName;
+                    link.download = fileName; 
+                    link.target = '_blank';
+
+                    uploadedFilesDiv.appendChild(link);
+                    uploadedFilesDiv.appendChild(document.createElement('br'));
+                }
+            }
+
+    </script>
+
+<script>
+    document.getElementById('uploadForm').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        const teacherName = document.getElementById('teacherName').value;
+        const courseName = document.getElementById('courseName').value;
+        const imageFile = document.getElementById('imageFile').files[0];
+        
+        if (!teacherName || !courseName || !imageFile) {
+            alert("Please fill in all fields.");
+            return;
+        }
+        
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            const imageUrl = event.target.result;
+
+            const img = document.createElement('img');
+            img.src = imageUrl;
+            img.alt = "Uploaded Image";
+            img.style.maxWidth = "120px";
+            img.style.borderRadius = "10px";
+            
+            const coursePara = document.createElement('h5');
+            coursePara.textContent = courseName;
+
+            const teacherPara = document.createElement('p');
+            teacherPara.textContent = teacherName;
+
+            const uploadInfoDiv = document.getElementById('uploadInfo');
+            const courseDiv = document.createElement('div');
+            
+            courseDiv.style.borderRadius = "10px"; 
+            courseDiv.style.border = "2px solid gainsboro"; 
+            courseDiv.style.padding = "20px 8px 0px 8px";
+            courseDiv.appendChild(img);
+            courseDiv.appendChild(coursePara);
+            courseDiv.appendChild(teacherPara);
+            uploadInfoDiv.appendChild(courseDiv);
+        };
+        reader.readAsDataURL(imageFile);
+    });
+</script>
+<script>
+    function updateNotificationDot() {
+      const dot = document.getElementById('notificationDot');
+      const unreadNotifications = 2;
+      if (unreadNotifications > 0) {
+        dot.style.display = 'block';
+      } else {
+        dot.style.display = 'none';
+      }
+    }
+
+    function notificationsRead() {
+      updateNotificationDot();
+    }
+
+    updateNotificationDot();
+  </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </body>
+</body>
+</html>

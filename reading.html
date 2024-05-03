@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sora_kids</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://kit.fontawesome.com/93483deb2b.js" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.css">
+<link rel="stylesheet" href="reading.css">
+</head>
+<body>
+    <div class="all">
+        <div class="body">
+            <div class="icon d-flex justify-content-between  fixed-bottom w-100 d-lg-none d-md-none d-block gap-2">
+                <div>
+                    <a href="studentdashboard.html" class="d-flex flex-column align-items-center">
+                        <i class="fa-solid fa-house text-center "></i>
+                    </a>
+                </div>
+                <div>
+                    <a href="classlist.html" class="d-flex flex-column align-items-center">
+                        <i class="fa-solid fa-list"></i>
+                    </a>
+                </div>
+                <div class="sap">
+                    <a href="schedule.html" class="d-flex flex-column align-items-center">
+                        <i class="fa-solid fa-clock"></i>
+                    </a>
+                </div>
+                <div class="sap">
+                    <a href="result.html" class="d-flex flex-column align-items-center">
+                        <i class="fa-solid fa-newspaper"></i>
+                    </a>
+                </div>
+                <div class="sap">
+                    <a href="news.html" class="d-flex flex-column align-items-center">
+                        <i class="fa-brands fa-phoenix-framework"></i>
+                    </a>
+                </div>
+                <div class="sap">
+                    <a href="reading.html" class="d-flex flex-column align-items-center">
+                        <i class="fa-solid fa-book"></i>
+                    </a>
+                </div>
+                <div>
+                    <a href="studentlog.html" class="d-flex flex-column align-items-center">
+                        <i class="fa-solid fa-right-from-bracket fs-4"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="side">
+                <div class="pon">
+                    <img src="image/three.png" alt="">
+                </div>
+                <div class="icons ">
+                    <div><a href="studentdashboard.html"><i class="fa-solid fa-house"></i></a></div>
+                    <div><a href="classlist.html"><i class="fa-solid fa-list"></i></a></div>
+                    <div><a href="schedule.html"><i class="fa-solid fa-clock"></i></a></div>
+                    <div><a href="result.html"><i class="fa-solid fa-newspaper"></i></a></div>
+                    <div><a href="news.html"><i class="fa-brands fa-phoenix-framework"></i></a></div>
+                    <div><a href="reading.html"><i class="fa-solid fa-book"></i></a></div>
+                    <div class="lil"><a href="studentlog.html"><i class="fa-solid fa-right-from-bracket"></i></a></div>
+                </div>
+            </div>
+            <div class="small">
+                <div class="d-lg-block d-none">
+                    <div class="d-flex justify-content-between sam ">
+                        <h5>My Profile</h5>
+                        <i class="fa-solid fa-user mt-1"></i>  
+                    </div>
+                </div>
+                <div class="line d-lg-block d-none"></div>
+                <div class="hel d-flex justify-content-between  d-lg-none d-block">
+                    <div>
+                        <h4>Hi, Sora Kids!</h4>
+                        <h6>Manage your classes and development</h6>
+                    </div>
+                    <div class="notification-icon d-flex align-items-center justify-content-end" onclick="window.location.href='notifications.html'">
+                        <span class="notification-dot" id="notificationDot"></span>
+                        <i class="fa-solid fa-bell"></i>
+                      </div>
+                </div>
+                <div class="class d-flex  justify-content-between align-items-center d-lg-none d-block">
+                    <h6 class="mt-1">Classmates</h6>
+                    <div class="images">
+                        <img src="image/avatar-angela-gray.webp" alt="">
+                        <img src="image/avatar-anna-kim.webp" alt="">
+                        <img src="image/avatar-jacob-thompson.webp" alt="">
+                        <img src="image/avatar-kimberly-smith.webp" alt="">
+                        <img src="image/avatar-mark-webber.webp" alt="">
+                        <img src="image/avatar-nathan-peterson.webp" alt="">
+                        <img src="image/avatar-rizky-hasanuddin.webp" alt="">
+                    </div>
+                </div>
+                <div id="studentDetails"></div>
+                <div class="upp">
+                    <div id="uploadedFiles"></div>
+                    <div id="message"></div>
+                    <h4>Upload Your Assignment</h4>
+                    <input type="file" id="fileInput">
+                    <button onclick="uploadFile()">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 3H12H8C6.34315 3 5 4.34315 5 6V18C5 19.6569 6.34315 21 8 21H11M13.5 3L19 8.625M13.5 3V7.625C13.5 8.17728 13.9477 8.625 14.5 8.625H19M19 8.625V11.8125" stroke="#fffffff" stroke-width="2"></path>
+                      <path d="M17 15V18M17 21V18M17 18H14M17 18H20" stroke="#fffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      ADD FILE 
+                      </button>
+                </div>
+            </div>
+            <div class="main">
+                <div class="dee">
+                    <h5>Recent Downloads</h5>
+                </div>
+
+                <div class="row round">
+                  <div id="modal-container"></div>
+                  <div id="recentDownloads">
+                      <div id="recentList"></div>
+                  </div>
+                      <div class="result-container">
+                          <p id="noResultMessage" style="display: none;">No result found.</p>
+                          <div class="bat">
+                              <div class="h5">Your Books</div>
+                              <div class="result-container">
+                                  <p id="noResultMessage" style="display: none;">No result found.</p>
+                                  <div class="down">
+                                      <div id="library">
+                                        <div id="books">
+                                      
+                                        </div> 
+                                    </div>
+                              </div>
+                          </div>
+                      </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const viewSelect = document.getElementById('view-select');
+        const performanceChart = document.getElementById('performance-chart').getContext('2d');
+  
+        const data = {
+          monthly: {
+            labels: ['Jan', 'Feb', 'Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+            values: [80, 85, 75,70,60,85,40,10,100,70,80,80] 
+          },
+          weekly: {
+            labels: ['Week 1', 'Week 2', 'Week 3','Week 4'], 
+            values: [70, 45, 72,80,] 
+          },
+          daily: {
+            labels: ['Mon', 'Tues', 'Wed','Thur','Fri','Sat','Sun'], 
+            values: [75, 78, 80,40,70,10,70] 
+          }
+        };
+  
+        let chart;
+  
+        function updateChart(view) {
+          const selectedData = data[view];
+  
+          if (chart) {
+            chart.destroy(); 
+          }
+  
+          chart = new Chart(performanceChart, {
+            type: 'line',
+            data: {
+              labels: selectedData.labels,
+              datasets: [{
+                label: 'Performance',
+                data: selectedData.values,
+                borderColor: 'black',
+                backgroundColor: 'rgba(0, 0, 255, 0.1)',
+              }]
+            },
+            options: {
+              scales: {
+                y: {
+                  beginAtZero: true,
+                  ticks: {
+                    stepSize: 10,
+                  }
+                }
+              }
+            }
+          });
+        }
+        updateChart(viewSelect.value);
+        viewSelect.addEventListener('change', function() {
+          updateChart(this.value);
+        });
+      });
+    </script>
+
+<script> 
+  document.addEventListener("DOMContentLoaded", function () {
+      var books = [
+          { id: 1, title: "Little Women", author: "Louisa May Alcott", url: "https://www.gutenberg.org/cache/epub/514/pg514-images.html", img: "https://i.pinimg.com/564x/76/a3/b0/76a3b07154cb6c9af293c21ee466b52a.jpg" },
+          { id: 2, title: "Frankenstein", author: "Mary Shelley", url: "https://www.gutenberg.org/files/84/84-0.txt", img: "https://i.pinimg.com/236x/20/b7/d2/20b7d25d8cfdaddff760958dab5e4228.jpg" },
+          { id: 3, title: "The Great Gatsby", author: "F. Scott Fitzgerald", url: "https://www.gutenberg.org/cache/epub/64317/pg64317-images.html", img: "https://i.pinimg.com/236x/01/bd/e2/01bde2894cddfb4d6839c0015f5bd874.jpg" },
+          { id: 4, title: "War and Peace", author: "Leo Tolstoy", url: "https://www.gutenberg.org/cache/epub/2600/pg2600-images.html", img: "https://i.pinimg.com/736x/8d/ee/d6/8deed608f365d495dcc1d0f8df5a5332.jpg" },
+          { id: 5, title: "1984", author: "George Orwell", url: "https://www.gutenberg.org/ebooks/57619", img: "https://i.pinimg.com/236x/00/8f/8e/008f8e6bfc851cbbfab99caddbfce8da.jpg" },
+          { id: 6, title: "My luck", author: "Andrew Caffrey", url: "https://www.gutenberg.org/cache/epub/73525/pg73525-images.html", img: "https://i.pinimg.com/564x/c7/2c/3b/c72c3bea21a1954881548c6422cf8082.jpg" },
+          { id: 7, title: "A Christmas Carol", author: "Charles Dickens", url: "https://www.gutenberg.org/cache/epub/24022/pg24022-images.html", img: "https://i.pinimg.com/564x/ab/d8/d6/abd8d619aba266139c01eb016e01c99a.jpg" },
+          { id: 8, title: "Black Beauty", author: "Anna Sewell", url: "https://www.gutenberg.org/cache/epub/271/pg271-images.html", img: "https://i.pinimg.com/564x/1f/f4/f7/1ff4f7ef4249b789da3a12703b1b1cfe.jpg" },
+      ];
+
+      var booksContainer = document.getElementById('books');
+      var recentList = document.getElementById('recentList');
+
+      books.forEach(function (book) {
+          var bookElement = document.createElement('div');
+          bookElement.classList.add('book');
+          bookElement.innerHTML = `
+              <img src="${book.img}" alt="${book.title}">
+              <h5 class="mt-1">${book.title}</h5>
+              <h6>${book.author}</h6>
+              <p>Book Code: 1d5g6hj</p>
+              <button class="download-btn" onclick="showModal('${book.title}', '${book.author}', '${book.url}')">Read Now <i class="fa-brands fa-readme"></i> </button>`;
+          booksContainer.appendChild(bookElement);
+      });
+
+      window.showModal = function (title, author, url) {
+          addRecentDownload({ title, author });
+
+          var modalContent = `
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Book Information</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                          </div>
+                          <div class="modal-body">
+                              <form>
+                                  <div class="form-group">
+                                      <label for="bookTitle">Book Title:</label>
+                                      <input type="text" class="form-control" id="bookTitle" value="${title}" readonly>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="authorName">Author Name:</label>
+                                      <input type="text" class="form-control" id="authorName" value="${author}" readonly>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="bookCode">Book Code:</label>
+                                      <input type="text" class="form-control" id="bookCode" required>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="phoneNumber">Phone Number:</label>
+                                      <input type="number" class="form-control" id="phoneNumber" required>
+                                  </div>
+                              </form>
+                          </div>
+                          <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-primary" onclick="submitForm('${title}', '${author}', '${url}')">Read Now</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          `;
+
+          document.getElementById('modal-container').innerHTML = modalContent;
+          $('#exampleModal').modal('show');
+      };
+
+      window.submitForm = function (title, author, url) {
+          var bookCode = document.getElementById('bookCode').value;
+          var phoneNumber = document.getElementById('phoneNumber').value;
+
+          console.log("Book Information:", { title, author, bookCode, phoneNumber });
+          window.open(url, '_blank');
+
+          $('#exampleModal').modal('hide');
+      };
+      function addRecentDownload(book) {
+          var recentDownloads = JSON.parse(localStorage.getItem('recentDownloads')) || [];
+          book.timestamp = new Date().toLocaleString();
+          recentDownloads.unshift(book);
+          recentDownloads = recentDownloads.slice(0, 5);
+          localStorage.setItem('recentDownloads', JSON.stringify(recentDownloads));
+          updateRecentDownloads(recentDownloads);
+      }
+      function updateRecentDownloads(recentDownloads) {
+          var recentListHTML = recentDownloads.map(function (book) {
+              return `
+                  <div class="recent-download">
+                      <p>${book.title} by ${book.author}</p>
+                  </div>`;
+          }).join('');
+
+          recentList.innerHTML = recentListHTML;
+      }
+      var initialRecentDownloads = JSON.parse(localStorage.getItem('recentDownloads')) || [];
+      updateRecentDownloads(initialRecentDownloads);
+  });
+</script>
+
+<div id="modal-container"></div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const studentDetails = JSON.parse(localStorage.getItem('studentDetails'));
+            if (studentDetails) {
+                const studentDetailsDiv = document.getElementById('studentDetails');
+                studentDetailsDiv.innerHTML = `
+                <img src="data:image/jpeg;base64,${studentDetails.image}" alt="Student Image">
+                <h6 class="dam">${studentDetails.name}</h6>
+                <p class="dim">${studentDetails.class}</p>`;
+            } else {
+                const studentDetailsDiv = document.getElementById('studentDetails');
+                 studentDetailsDiv.innerHTML = "<p>No student details found.</p>";
+            }
+        });
+    </script>
+
+    <script>
+        function uploadFile() {
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+            if (!file) {
+                document.getElementById('message').innerText = "Please select a file.";
+                return;
+            }
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const fileData = event.target.result;
+                localStorage.setItem(file.name, fileData);
+        
+                document.getElementById('message').innerText = "File uploaded successfully.";
+             listUploadedFiles();
+            };
+             reader.readAsDataURL(file);
+        }
+
+            function listUploadedFiles() {
+                const uploadedFilesDiv = document.getElementById('uploadedFiles');
+                 uploadedFilesDiv.innerHTML = '';
+
+                for (let i = 0; i < localStorage.length; i++) {
+                    const fileName = localStorage.key(i);
+                    const fileData = localStorage.getItem(fileName);
+
+                    const link = document.createElement('a');
+                    link.href = fileData;
+                    link.textContent = fileName;
+                    link.download = fileName; 
+                    link.target = '_blank';
+
+                    uploadedFilesDiv.appendChild(link);
+                    uploadedFilesDiv.appendChild(document.createElement('br'));
+                }
+            }
+
+    </script>
+
+<script>
+    function updateNotificationDot() {
+      const dot = document.getElementById('notificationDot');
+      const unreadNotifications = 2;
+      if (unreadNotifications > 0) {
+        dot.style.display = 'block';
+      } else {
+        dot.style.display = 'none';
+      }
+    }
+
+    function notificationsRead() {
+      updateNotificationDot();
+    }
+
+    updateNotificationDot();
+  </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </body>
+</body>
+</html>

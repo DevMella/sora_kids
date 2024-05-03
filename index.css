@@ -1,0 +1,482 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Inconsolata', monospace;
+}
+.all{
+  overflow: hidden;
+}
+.fir{
+  width: 100%;
+  height: 80vh;
+}
+.dropdown{
+  font-weight: 800;
+}
+.navbar{
+  padding: 20px 70px 20px 60px;
+  /* height: 100px; */
+  width: 100%;
+  position: fixed;
+  background-color: white;
+  z-index: 100;
+}
+.nav-item {
+  display: inline-block;
+  margin-right: 20px;
+  position: relative;
+  color: rgb(4, 4, 26);
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+.navbar .nav-item::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0px;
+    left: 0;
+    background-color: orange;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+} 
+.navbar .nav-link:hover {
+    color: orange; 
+}
+.nav-item:hover::after {
+  transform: scaleX(1);
+}
+.navbar-brand img{
+  width: 100px;
+}
+.button {
+  position: relative;
+  padding: 10px 22px;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  font-weight: 800;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: orange;
+  transition: all 0.2s ease;
+}
+.button:active {
+  transform: scale(0.96);
+}
+.button:before,
+.button:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
+}
+.button:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #7d2ae8 20%, transparent 30%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: greentopBubbles 0.6s ease;
+}
+@keyframes greentopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+.button:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: greenbottomBubbles 0.6s ease;
+}
+@keyframes greenbottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+.back{
+  padding-top: 100px;
+}
+form a {
+  text-decoration: none;
+}
+.back img{
+  width: 100%;
+  height: 30px;
+  margin-bottom: -10px;
+}
+.swiper-button-next,.swiper-but ton-prev{
+  color: white !important;
+}
+.easy {
+  background-image: url(https://html.xpressbuddy.com/kinter/assets/img/about/about.png);
+  height: 80vh;
+  background-color: gainsboro;
+  background-repeat: no-repeat;
+  background-position:right;
+  padding:100px 60px 20px 80px;
+}
+.eas {
+  background-image: url(https://images.pexels.com/photos/5428007/pexels-photo-5428007.jpeg?auto=compress&cs=tinysrgb&w=1400);
+  height: 80vh;
+  background-color: gainsboro;
+  background-repeat: no-repeat;
+  background-position:right;
+  padding:100px 60px 20px 80px;
+}
+.ease {
+  background-image: url(https://images.pexels.com/photos/4143791/pexels-photo-4143791.jpeg?auto=compress&cs=tinysrgb&w=1400);
+  height: 80vh;
+  background-color: gainsboro;
+  background-repeat: no-repeat;
+  background-position:right;
+  padding:100px 60px 20px 80px;
+}
+.easy h5,.eas h5,.ease h5{
+  width: 650px;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+.easy h3,.eas h3,.ease h3{
+  font-size: 45px;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+}
+.easy h1,.eas h1,.ease h1{
+  font-size: 70px;
+  font-weight: 800;
+  font-family: "Rubik Scribble", system-ui;
+  letter-spacing: 2px;
+  word-spacing: 5px;
+}
+.button a{
+  color: white;
+}
+.sec{
+  width: 100%;
+  padding:180px 80px 50px 80px;
+}
+.mam h3,.thir h2,.four h2,.six h2{
+  font-weight: 800;
+  font-size: 41px;
+}
+.mam h5{
+  font-size: 20px;
+}
+.cam{
+  padding: 30px;
+  background-color: rgb(247, 237, 237);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.cam i{
+  font-size: 40px;
+  color: rgb(248, 124, 142);
+}
+.cam h5{
+  color: rgb(248, 124, 142);
+}
+.cab{
+  background-color: rgb(228, 228, 243);
+}
+.can{
+  background-color: rgb(214, 241, 214);
+}
+.cas{
+  background-color: rgb(241, 224, 191);
+}
+.cab i{
+  font-size: 40px;
+  color: rgb(157, 157, 238);
+}
+.cab h5{
+  color: rgb(157, 157, 238);
+}
+.can i{
+  font-size: 40px;
+  color: rgb(148, 241, 148);
+}
+.can h5{
+  color: rgb(148, 241, 148);
+}
+.cas i{
+  font-size: 40px;
+  color: rgb(238, 200, 124);
+}
+.cas h5{
+  color: rgb(238, 200, 124);
+}
+.thir{
+  width: 100%;
+  padding:20px 80px 50px 80px;
+}
+.thir h6{
+  letter-spacing: 1px;
+  line-height: 26px;
+}
+.lin img{
+  border-radius: 15px;
+}
+.che{
+  padding-top: 100px;
+}
+.four{
+  width: 100%;
+  padding:20px 80px 0px 80px;
+}
+.cra {
+  box-shadow: #63636333 0px 1px 4px 0px;
+  border-radius: 15px; 
+}
+.cra img{
+  width: 100%;
+}
+.line{
+  width: 1px;
+  height: 30px;
+  background-color: black;
+  margin-top: 10px;
+}
+.mon{
+  gap: 25px;
+}
+.gee{
+  padding: 25px 20px 20px 20px;
+}
+.gee h4{
+  font-weight: 800;
+}
+.gee h5{
+  font-size: 17px;
+}
+.mon h5{
+  color: orange;
+  font-size: 22px;
+  font-weight: 800;
+}
+.five{
+  width: 100%;
+  background-color: orange;
+}
+.fies{
+  padding:40px 20px 30px 80px;
+  color: white;
+}
+.ove{
+  margin-top: 38px;
+}
+.hol i{
+  font-size: 50px;
+}
+.hol h3{
+  font-weight: 800;
+  font-size: 40px;
+}
+.six{
+  width: 100%;
+  padding:60px 80px 0px 80px;
+}
+.colo{
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+.any img{
+  width: 100%;
+  border-radius: 10px;
+}
+.colo{
+  display: inline-block;
+  margin-right: 20px;
+  position: relative;
+  color: rgb(4, 4, 26);
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+.colo::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0px;
+    left: 0;
+    background-color: orange;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+} 
+.colo:hover {
+    color: orange; 
+}
+.colo:hover::after {
+  transform: scaleX(1);
+}
+.seven{
+  width: 100%;
+  padding:60px 80px 40px 80px;
+}
+.aye{
+  width: 1px ;
+  height: 10px;
+  background-color: black;
+  margin-top: 5px;
+}
+.gee h3{
+  font-size: 20px;
+  color: orange;
+  font-weight: 800;
+}
+.gee a{
+  text-decoration: none;
+}
+.cra img{
+  border-radius: 10px 10px 0px 0px;
+}
+footer{
+  padding:30px 60px 20px 80px;
+  background-color: black;
+  color: white;
+}
+.raw h5 span{ 
+  color: orange;
+}
+.raw i{
+  font-size: 35px;
+}
+.button a{
+  color: white;
+}
+@media (max-width:764px) {
+  .navbar{
+    padding: 20px 0px 20px 0px;
+  }
+  .easy h5,.eas h5,.ease h5{
+    width: 300px;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+  .easy h3,.eas h3,.ease h3{
+    font-size: 45px;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    font-size: 25px;
+  }
+  .easy h1,.eas h1,.ease h1{
+    font-size: 35px;
+  }
+  .easy {
+    padding:120px 15px 20px 15px;
+    background-image:linear-gradient(to right, rgba(0,0,0,0.6)50%, rgba(0,0,0,0.6)50%), url(https://html.xpressbuddy.com/kinter/assets/img/about/about.png);
+  }
+  .eas {
+    padding:120px 15px 20px 15px;
+    background-image:linear-gradient(to right, rgba(0,0,0,0.6)50%, rgba(0,0,0,0.6)50%), url(https://images.pexels.com/photos/5428007/pexels-photo-5428007.jpeg?auto=compress&cs=tinysrgb&w=1400);
+  }
+  .ease {
+    padding:120px 15px 20px 15px;
+    background-image:linear-gradient(to right, rgba(0,0,0,0.6)50%, rgba(0,0,0,0.6)50%), url(https://images.pexels.com/photos/4143791/pexels-photo-4143791.jpeg?auto=compress&cs=tinysrgb&w=1400);
+  }
+  .mam h3,.che h2,.four h2,.six h2{
+    font-size: 33px;
+  }
+  .sec{
+    padding: 180px 15px 0px 15px;
+  }
+  .thir{
+    padding: 0px 15px 20px 15px;
+    margin-top: -50px;
+  }
+  .lin img{
+    width: 100%;
+  }
+  .four{
+    padding: 100px 15px 20px 15px;
+    margin-top: -50px;
+  }
+  .mon h5{
+    font-size: 18px;
+  }
+  .ove{
+    margin-top: -20px;
+  }
+  .fies{
+    padding: 30px 15px 20px 35px;
+    
+  }
+  .sho{
+    margin-top: -70px;
+  }
+  .six{
+    padding: 60px 15px 0px 15px;
+  }
+  .com{
+    margin-bottom: 25px;
+  }
+  .seven{
+    padding: 60px 15px 0px 15px;
+  }
+  .footer{
+    padding:30px 20px 0px 20px;
+    margin-left: -300px !important;
+  }
+  .raw,.gaa{
+    flex-direction: column;
+  }
+  .gaa{
+    gap: 20px !important;
+  }
+  .raw{
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+  }
+  .gaa i{
+    font-size: 30px;
+  }
+}

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sora_kids</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://kit.fontawesome.com/93483deb2b.js" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.css">
+<link rel="stylesheet" href="result.css">
+</head>
+<body>
+    <div class="all">
+        <div class="body">
+          <div class="icon d-flex justify-content-between  fixed-bottom w-100 d-lg-none d-md-none d-block gap-2">
+            <div>
+                <a href="studentdashboard.html" class="d-flex flex-column align-items-center">
+                    <i class="fa-solid fa-house text-center "></i>
+                </a>
+            </div>
+            <div>
+                <a href="classlist.html" class="d-flex flex-column align-items-center">
+                    <i class="fa-solid fa-list"></i>
+                </a>
+            </div>
+            <div class="sap">
+                <a href="schedule.html" class="d-flex flex-column align-items-center">
+                    <i class="fa-solid fa-clock"></i>
+                </a>
+            </div>
+            <div class="sap">
+                <a href="result.html" class="d-flex flex-column align-items-center">
+                    <i class="fa-solid fa-newspaper"></i>
+                </a>
+            </div>
+            <div class="sap">
+                <a href="news.html" class="d-flex flex-column align-items-center">
+                    <i class="fa-brands fa-phoenix-framework"></i>
+                </a>
+            </div>
+            <div class="sap">
+                <a href="reading.html" class="d-flex flex-column align-items-center">
+                    <i class="fa-solid fa-book"></i>
+                </a>
+            </div>
+            <div>
+                <a href="studentlog.html" class="d-flex flex-column align-items-center">
+                    <i class="fa-solid fa-right-from-bracket fs-4"></i>
+                </a>
+            </div>
+        </div>
+            <div class="side">
+                <div class="pon">
+                    <img src="image/three.png" alt="">
+                </div>
+                <div class="icons ">
+                    <div><a href="studentdashboard.html"><i class="fa-solid fa-house"></i></a></div>
+                    <div><a href="classlist.html"><i class="fa-solid fa-list"></i></a></div>
+                    <div><a href="schedule.html"><i class="fa-solid fa-clock"></i></a></div>
+                    <div><a href="result.html"><i class="fa-solid fa-newspaper"></i></a></div>
+                    <div><a href="news.html"><i class="fa-brands fa-phoenix-framework"></i></a></div>
+                    <div><a href="reading.html"><i class="fa-solid fa-book"></i></a></div>
+                    <div class="lil"><a href="studentlog.html"><i class="fa-solid fa-right-from-bracket"></i></a></div>
+                </div>
+            </div>
+            <div class="small">
+                <div class="d-lg-block d-none">
+                    <div class="d-flex justify-content-between sam ">
+                        <h5>My Profile</h5>
+                        <i class="fa-solid fa-user mt-1"></i>  
+                    </div>
+                </div>
+                <div class="line d-lg-block d-none"></div>
+                <div class="hel d-flex justify-content-between  d-lg-none d-block">
+                    <div>
+                        <h4>Hi, Sora Kids!</h4>
+                        <h6>Manage your classes and development</h6>
+                    </div>
+                    <div class="notification-icon d-flex align-items-center justify-content-end" onclick="window.location.href='notifications.html'">
+                        <span class="notification-dot" id="notificationDot"></span>
+                        <i class="fa-solid fa-bell"></i>
+                      </div>
+                </div>
+                <div class="class d-flex  justify-content-between align-items-center d-lg-none d-block">
+                    <h6 class="mt-1">Classmates</h6>
+                    <div class="images">
+                        <img src="image/avatar-angela-gray.webp" alt="">
+                        <img src="image/avatar-anna-kim.webp" alt="">
+                        <img src="image/avatar-jacob-thompson.webp" alt="">
+                        <img src="image/avatar-kimberly-smith.webp" alt="">
+                        <img src="image/avatar-mark-webber.webp" alt="">
+                        <img src="image/avatar-nathan-peterson.webp" alt="">
+                        <img src="image/avatar-rizky-hasanuddin.webp" alt="">
+                    </div>
+                </div>
+                <div id="studentDetails"></div>
+                <div class="upp">
+                    <div id="uploadedFiles"></div>
+                    <div id="message"></div>
+                    <h4>Upload Your Assignment</h4>
+                    <input type="file" id="fileInput">
+                    <button onclick="uploadFile()">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 3H12H8C6.34315 3 5 4.34315 5 6V18C5 19.6569 6.34315 21 8 21H11M13.5 3L19 8.625M13.5 3V7.625C13.5 8.17728 13.9477 8.625 14.5 8.625H19M19 8.625V11.8125" stroke="#fffffff" stroke-width="2"></path>
+                      <path d="M17 15V18M17 21V18M17 18H14M17 18H20" stroke="#fffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                      ADD FILE 
+                      </button>
+                </div>
+            </div>
+            <div class="main">
+                <div class="dee">
+                    <h5>Exam Results</h5>
+                </div>
+                <div class="say">
+                    <div class="like">
+                        <div class="pii">
+                            <div class="call">
+                                <h6>Exam :Final Exam</h6>
+                                <p class="mt-2">Courses:11</p>
+                            </div>
+                            <div class="row">
+                                <div class="col col-lg-4">
+                                    <div class="gbe d-flex gap-3 align-items-center ">
+                                        <div class="soo d-flex align-items-center justify-content-center">
+                                            <i class="fa-solid fa-user"></i>
+                                        </div>
+                                        <div>
+                                            <h6>Attendees</h6>
+                                            <h4>23</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-lg-4">
+                                    <div class="gbe d-flex gap-3 align-items-center ">
+                                        <div class="soo d-flex align-items-center justify-content-center">
+                                            <i class="fa-solid fa-chalkboard-user"></i>
+                                        </div>
+                                        <div>
+                                            <h6>Invigilator</h6>
+                                            <h4>10</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-lg-4">
+                                    <div class="gbe d-flex gap-3 align-items-center ">
+                                        <div class="soo d-flex align-items-center justify-content-center">
+                                            <i class="fa-solid fa-calendar-days"></i>
+                                        </div>
+                                        <div>
+                                            <h6>No of Days</h6>
+                                            <h4>20</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sho mt-5">
+                      <div class="d-flex justify-content-between loov px-4">
+                        <h5>Tutor</h5>
+                        <h5>Course</h5>
+                        <h5>Grade</h5>
+                        <h5>Score</h5>
+                        <h5>Download</h5>
+                      </div>
+                      <div id="courses"></div>
+                      <div class="d-flex justify-content-end ">
+                        <button class="bat bats" onclick="downloadAllCourses()">Download All</button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const viewSelect = document.getElementById('view-select');
+        const performanceChart = document.getElementById('performance-chart').getContext('2d');
+  
+        const data = {
+          monthly: {
+            labels: ['Jan', 'Feb', 'Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+            values: [80, 85, 75,70,60,85,40,10,100,70,80,80] 
+          },
+          weekly: {
+            labels: ['Week 1', 'Week 2', 'Week 3','Week 4'], 
+            values: [70, 45, 72,80,] 
+          },
+          daily: {
+            labels: ['Mon', 'Tues', 'Wed','Thur','Fri','Sat','Sun'], 
+            values: [75, 78, 80,40,70,10,70] 
+          }
+        };
+  
+        let chart;
+  
+        function updateChart(view) {
+          const selectedData = data[view];
+  
+          if (chart) {
+            chart.destroy(); 
+          }
+  
+          chart = new Chart(performanceChart, {
+            type: 'line',
+            data: {
+              labels: selectedData.labels,
+              datasets: [{
+                label: 'Performance',
+                data: selectedData.values,
+                borderColor: 'black',
+                backgroundColor: 'rgba(0, 0, 255, 0.1)',
+              }]
+            },
+            options: {
+              scales: {
+                y: {
+                  beginAtZero: true,
+                  ticks: {
+                    stepSize: 10,
+                  }
+                }
+              }
+            }
+          });
+        }
+        updateChart(viewSelect.value);
+        viewSelect.addEventListener('change', function() {
+          updateChart(this.value);
+        });
+      });
+    </script>
+  
+  <script>
+    const courses = [
+      {
+        tutor: "John Doe",
+        pic: "image/avatar-angela-gray.webp",
+        course: "Mathematics",
+        grade: "A",
+        score: 95
+      },
+      {
+        tutor: "Anna Kim",
+        pic: "image/avatar-anna-kim - Copy.webp",
+        course: "English",
+        grade: "C",
+        score: 52
+      },
+      {
+        tutor: "Jacob Thompson",
+        pic: "image/avatar-jacob-thompson - Copy.webp",
+        course: "Biology",
+        grade: "B",
+        score: 65
+      },
+      {
+        tutor: "Kimberly Smith",
+        pic: "image/avatar-kimberly-smith.webp",
+        course: "Culinary Arts",
+        grade: "B",
+        score: 69
+      },
+      {
+        tutor: "Mark Webber",
+        pic: "image/avatar-mark-webber.webp",
+        course: "French 1",
+        grade: "A",
+        score: 87
+      },
+      {
+        tutor: "Nathan Peterson",
+        pic: "image/avatar-nathan-peterson.webp",
+        course: "Public Speaking",
+        grade: "A",
+        score: 77
+      },
+      {
+        tutor: "Alex Johnson",
+        pic: "https://html.xpressbuddy.com/kinter/assets/img//teacher/img-04.jpg",
+        course: "Irish Cultural Studies",
+        grade: "F",
+        score: 23,
+      },
+      {
+        tutor: "Hadassa Kell",
+        pic: "https://i.pinimg.com/564x/c8/8a/e4/c88ae4e0f3b90d0a6b2601e0bc2a8163.jpg",
+        course: "Sewing/Textile Arts",
+        grade: "F",
+        score: 23,
+      },
+      {
+        tutor: "Blessing Badmus",
+        pic: "https://i.pinimg.com/236x/ef/6a/25/ef6a25b470fb53f9507124a822e70b93.jpg",
+        course: "Ornithology-Biology of Birds",
+        grade: "B",
+        score: 62,
+      },
+      {
+        tutor: "Janeth Hadassa",
+        pic: "https://i.pinimg.com/564x/4e/f6/f5/4ef6f5b1351c9eea41bcf037e9c6c1c4.jpg",
+        course: "Science",
+        grade: "A",
+        score: 93,
+      },
+      {
+        tutor: "Kenneth Lyia",
+        pic: "https://i.pinimg.com/564x/14/17/91/141791e52c8b60893c1f8874460f1ef5.jpg",
+        course: "General Studies",
+        grade: "D",
+        score: 55,
+      },
+    ];
+
+  
+    function createCourseHTML(course) {
+      return `
+        <div class="course-container mb-3">
+          <div class="d-flex gap-2 ade ">
+            <img src="${course.pic}" alt="${course.tutor}">
+            <p class="mt-1"> ${course.tutor}</p>
+          </div>
+          <h5 class="mt-2">${course.course}</h2>
+          <p class="mt-3">Grade: ${course.grade}</p>
+          <p class="mt-3">Score: ${course.score}</p>
+          <button class="bat" onclick="downloadCourse('${course.course}')">Download</button>
+        </div>
+      `;
+    }
+  
+    function createAllCoursesText() {
+      let allCoursesText = "";
+      courses.forEach(course => {
+        allCoursesText += `Course: ${course.course}\nTutor: ${course.tutor}\nGrade: ${course.grade}\nScore: ${course.score}\n\n`;
+      });
+      return allCoursesText;
+    }
+  
+    function downloadCourse(courseName) {
+      const course = courses.find(c => c.course === courseName);
+      const courseText = `Course: ${course.course}\nTutor: ${course.tutor}\nGrade: ${course.grade}\nScore: ${course.score}`;
+  
+      const blob = new Blob([courseText], { type: "text/plain" });
+  
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = `${course.course}.txt`;
+  
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+    function downloadAllCourses() {
+      const allCoursesText = createAllCoursesText();
+      const blob = new Blob([allCoursesText], { type: "text/plain" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = "all_courses.txt";
+      document.body.appendChild(link);
+      link.click();
+  
+      document.body.removeChild(link);
+    }
+  
+    function displayCourses() {
+      const coursesContainer = document.getElementById("courses");
+      coursesContainer.innerHTML = "";
+      courses.forEach(course => {
+        coursesContainer.innerHTML += createCourseHTML(course);
+      });
+    }
+    displayCourses();
+  </script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const studentDetails = JSON.parse(localStorage.getItem('studentDetails'));
+            if (studentDetails) {
+                const studentDetailsDiv = document.getElementById('studentDetails');
+                studentDetailsDiv.innerHTML = `
+                <img src="data:image/jpeg;base64,${studentDetails.image}" alt="Student Image">
+                <h6 class="dam">${studentDetails.name}</h6>
+                <p class="dim">${studentDetails.class}</p>`;
+            } else {
+                const studentDetailsDiv = document.getElementById('studentDetails');
+                 studentDetailsDiv.innerHTML = "<p>No student details found.</p>";
+            }
+        });
+    </script>
+
+    <script>
+        function uploadFile() {
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+            if (!file) {
+                document.getElementById('message').innerText = "Please select a file.";
+                return;
+            }
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const fileData = event.target.result;
+                localStorage.setItem(file.name, fileData);
+        
+                document.getElementById('message').innerText = "File uploaded successfully.";
+             listUploadedFiles();
+            };
+             reader.readAsDataURL(file);
+        }
+
+            function listUploadedFiles() {
+                const uploadedFilesDiv = document.getElementById('uploadedFiles');
+                 uploadedFilesDiv.innerHTML = '';
+
+                for (let i = 0; i < localStorage.length; i++) {
+                    const fileName = localStorage.key(i);
+                    const fileData = localStorage.getItem(fileName);
+
+                    const link = document.createElement('a');
+                    link.href = fileData;
+                    link.textContent = fileName;
+                    link.download = fileName; 
+                    link.target = '_blank';
+
+                    uploadedFilesDiv.appendChild(link);
+                    uploadedFilesDiv.appendChild(document.createElement('br'));
+                }
+            }
+
+    </script>
+
+<script>
+    function updateNotificationDot() {
+      const dot = document.getElementById('notificationDot');
+      const unreadNotifications = 2;
+      if (unreadNotifications > 0) {
+        dot.style.display = 'block';
+      } else {
+        dot.style.display = 'none';
+      }
+    }
+
+    function notificationsRead() {
+      updateNotificationDot();
+    }
+
+    updateNotificationDot();
+  </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </body>
+</body>
+</html>
